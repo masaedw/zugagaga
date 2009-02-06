@@ -1,0 +1,33 @@
+= ずががが
+
+ネットワーク対戦ゲームです。
+
+== 必要なライブラリ
+
+  SDL            (http://www.libsdl.org/)
+  SDL_image      (http://www.libsdl.org/projects/SDL_image/)
+  SDL_ttf        (http://www.libsdl.org/projects/SDL_ttf/)
+  SDL_net        (http://www.libsdl.org/projects/SDL_net/)
+  Boost          (http://www.boost.org/)
+
+それぞれ適宜インストールして使える状態にしておく必要があります。
+
+
+== コンパイル方法
+
+配布物のトップディレクトリで
+
+  $ make
+
+Boostのディレクトリを指定する場合は
+  $ env BOOST_DIR=/usr/local/include make
+
+実行ファイル zu3ga ができます。
+
+== 実行方法
+
+  $ ./zu3ga
+
+オプション:
+ -d,--images-dir ./images	画像の入っているディレクトリ
+ -v,--verbose 0			数字が多いほど良く喋る

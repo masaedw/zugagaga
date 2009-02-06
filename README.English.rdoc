@@ -11,7 +11,8 @@ Or install from source:
   SDL        http://www.libsdl.org/
   SDL_image  http://www.libsdl.org/projects/SDL_image/
   SDL_ttf    http://www.libsdl.org/projects/SDL_ttf/
-  Boost      http://www.boost.org/)
+  SDL_net    http://www.libsdl.org/projects/SDL_net/
+  Boost      http://www.boost.org/
 
 == Compiling
 
@@ -24,6 +25,7 @@ You may need to set your BOOST_DIR environment variable:
   $ BOOST_DIR=/usr/local/include make
 
 == Running
+
   $ ./zu3ga
 
 Options:
