@@ -314,7 +314,7 @@ void NTT::OneFrameProc()
 	ver_speed = -3.0;
       }
       // 重力を打ち消す
-      if (2 <= frame <= 18) {
+      if (2 <= frame && frame <= 18) {
 	ver_speed -= gravity;
       }
       // 微妙に落下

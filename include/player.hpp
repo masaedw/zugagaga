@@ -219,7 +219,7 @@ namespace zu3ga {
       return true;
     }
     bool GetArrow(SendObject& arrow, int id, const SendPos& view_pos, bool focus = false);
-    unsigned char Player::GetArrowState(Team::t, double, Direction::t);
+    unsigned char GetArrowState(Team::t, double, Direction::t);
     int GetSiteSize(double dist);
     Player* GetTarget(){ return target; }
     SendPos GetDashGaugePos(bool up_draw = false)

@@ -28,7 +28,7 @@ class HogeTimer
   unsigned int count;
   unsigned int skip;
  public:
-  HogeTimer() : skip(0) {}
+  HogeTimer() : skip(0) { stime = 0; }
   ~HogeTimer() {}
   void SetFPS( unsigned int in )
   {
