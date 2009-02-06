@@ -1,0 +1,35 @@
+!ずががが
+ネットワーク対戦ゲームです。
+
+!コンパイル方法
+
+!!必要なライブラリ
+SDL		(http://www.libsdl.org/)
+SDL_image	(http://www.libsdl.org/projects/SDL_image/)
+SDL_ttf		(http://www.libsdl.org/projects/SDL_ttf/)
+Boost		(http://www.boost.org/)
+
+それぞれ適宜インストールして使える状態にしておく必要がある。
+
+zu3ga.tar.gzを展開してできるディレクトリで、
+
+ make
+
+Boostのディレクトリを指定する場合
+ env BOOST_DIR=/usr/local/include make
+
+カレントディレクトリに実行ファイル zu3ga ができる。
+
+!!注意事項
+
+images の中にフォントファイル(kochi-gothic.ttf)が必要だが、ライセンス上
+の問題で再配布できないので、公開リポジトリにコミットするに当たり削除し
+ました。実行の際には代替となるフォントを用意し、ここに置いて下さい。
+
+!実行方法
+
+ ./zu3ga
+
+!!コマンドラインオプション
+ -d,--images-dir ./images	画像の入っているディレクトリ。
+ -v,--verbose 0			数字が多いほど良く喋る。
