@@ -1,0 +1,32 @@
+= Zugagaga
+
+== Dependencies
+
+On Ubuntu, you can just do this:
+
+  $ sudo apt-get install libsdl-ttf2.0-dev libsdl-net1.2-dev \
+    libsdl-image1.2-dev
+
+Or install from source:
+  SDL        http://www.libsdl.org/
+  SDL_image  http://www.libsdl.org/projects/SDL_image/
+  SDL_ttf    http://www.libsdl.org/projects/SDL_ttf/
+  Boost      http://www.boost.org/)
+
+== Compiling
+
+Normally, just:
+
+  $ make
+
+You may need to set your BOOST_DIR environment variable:
+
+  $ BOOST_DIR=/usr/local/include make
+
+== Running
+  $ ./zu3ga
+
+Options:
+ -d,--images-dir ./images
+ -v,--verbose
+
