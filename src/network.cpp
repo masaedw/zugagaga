@@ -73,7 +73,7 @@ namespace {
 
   inline bool SockWrite( TCPsocket sock, const string& data )
   {
-    return SDLNet_TCP_Send(sock,const_cast<char*>(data.data()),data.size()) == data.size();
+    return SDLNet_TCP_Send(sock,const_cast<char*>(data.data()),data.size()) == (Sint32)data.size();
   }
 }
 

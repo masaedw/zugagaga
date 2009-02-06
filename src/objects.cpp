@@ -410,7 +410,7 @@ const SendObjAry* Objects::GetSendData()
 // プレイヤーを物体配列に追加する
 int Objects::AddPlayer(const PlayerInitData& data)
 {
-  Player* player;
+  Player* player = 0;
   int id = next_id++;
 
   switch (data.type) {

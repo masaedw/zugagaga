@@ -38,12 +38,12 @@ namespace edw {
     {
       typename T::time_t ntime = impl.GetTicks();
       if ( interval > ntime - stime )
-	impl.Delay( interval - ( ntime - stime ) );
+        impl.Delay( interval - ( ntime - stime ) );
       double fps = 0;
       if ( ntime - fpstime > 1000 ) {
-	fps = count * 1000.0 / ( ntime - fpstime );
-	count = 0;
-	fpstime = ntime;
+        fps = count * 1000.0 / ( ntime - fpstime );
+        count = 0;
+        fpstime = ntime;
       }
       return fps;
     }
@@ -54,7 +54,7 @@ namespace edw {
     unsigned int count;
     T impl;
   public:
-    Timer() {}
+    Timer() : interval(0), stime(0), fpstime(0) {}
     ~Timer() {}
   };
 

@@ -269,7 +269,7 @@ LobbyIO::GetMsg()
 void
 LobbyIO::NextChara(int i)
 {
-  PlayerType::t type;
+  PlayerType::t type(PlayerType::Planex);
   string num;
   switch (info_.initdata[i].type) {
   case PlayerType::Planex:
@@ -292,7 +292,7 @@ LobbyIO::NextChara(int i)
 void
 LobbyIO::PrevChara(int i)
 {
-  PlayerType::t type;
+  PlayerType::t type(PlayerType::Planex);
   string num;
   switch (info_.initdata[i].type) {
   case PlayerType::Planex:
@@ -315,7 +315,7 @@ LobbyIO::PrevChara(int i)
 void
 LobbyIO::NextTeam(int i)
 {
-  Team::t team;
+  Team::t team(Team::I);
   string num;
   switch ( info_.initdata[i].team ) {
   case Team::I:
@@ -345,7 +345,7 @@ LobbyIO::NextTeam(int i)
 void
 LobbyIO::PrevTeam(int i)
 {
-  Team::t team;
+  Team::t team = Team::t(0);
   string num;
   switch ( info_.initdata[i].team ) {
   case Team::I:

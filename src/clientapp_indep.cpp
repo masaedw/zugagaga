@@ -1,4 +1,5 @@
 // last modified <2004/02/09 04:26:26 2004 JST>
+#include <stdexcept>
 #include <vector>
 #include <boost/bind.hpp>
 #include "clientapp.hpp"
@@ -28,7 +29,12 @@ class HogeTimer
   unsigned int count;
   unsigned int skip;
  public:
-  HogeTimer() : skip(0) { stime = 0; }
+  HogeTimer()
+    : interval(0)
+    , stime(0)
+    , fpstime(0)
+    , skip(0)
+  {}
   ~HogeTimer() {}
   void SetFPS( unsigned int in )
   {
@@ -170,7 +176,7 @@ ClientApp::Mainloop()
     errmsg_ = e.JaMsg();
     return false;
   }
-  catch (const exception& e) {
+  catch (const std::exception& e) {
     errmsg_ = e.what();
     return false;
   }
