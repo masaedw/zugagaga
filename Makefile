@@ -1,7 +1,9 @@
-all: Zu3ga
+.PHONY: zu3ga clean
 
-Zu3ga:
-	cd src && make
+all: zu3ga
+
+zu3ga:
+	$(MAKE) -C src
 
 clean:
-	cd src && make clean
+	$(MAKE) -C src clean
