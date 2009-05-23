@@ -13,6 +13,13 @@
 
 namespace zu3ga {
   namespace network {
+    class Error : public Zu3gaError
+    {
+    public:
+      Error(const std::string& ja)
+	: Zu3gaError(ja, SDLNet_GetError()) {}
+    };
+
     class Connection
     {
     public:

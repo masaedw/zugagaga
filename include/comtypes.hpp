@@ -658,15 +658,6 @@ namespace zu3ga {
     std::string jamsg;
   };
 
-  namespace network {
-    class Error : public Zu3gaError
-    {
-    public:
-      Error(const std::string& ja)
-	: Zu3gaError(ja, "network error") {}
-    };
-  }
-
   class SyntaxError : public Zu3gaError
   {
   public:

@@ -4,6 +4,7 @@
 #include <cctype>
 #include <cstdlib>
 #include <boost/bind.hpp>
+#include "verbose.hpp"
 #include "clientapp.hpp"
 #include "networkio.hpp"
 #include "localio.hpp"
@@ -308,7 +309,16 @@ namespace {
       sp_Connection con(new Connection(host_->GetString(), StrToInt(port_->GetString())));
       try {
 	con->Open();
-      } catch (exception& e) {
+      } catch (const Zu3gaError& e) {
+        verbose::puts(2, e.JaMsg());
+        verbose::puts(2, e.what());
+	err_ = errconnect_;
+	while ( !host_->HaveFocus() ) {
+	  fm_.Next();
+	}
+	return sp_LobbyIO();
+      } catch (const exception& e) {
+        verbose::puts(2, e.what());
 	err_ = errconnect_;
 	while ( !host_->HaveFocus() ) {
 	  fm_.Next();
