@@ -19,7 +19,7 @@ namespace {
   {
     IPaddress ip;
     ip.host = INADDR_ANY;
-    ip.port = port;
+    ip.port = htons(port);
     return SDLNet_TCP_Open(&ip);
   }
 }
