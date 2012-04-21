@@ -17,7 +17,7 @@ ifdef BOOST_DIR
 endif
 
 ifeq ($(ostype), Darwin)
-  CFLAGS	= -W -Wall -ansi $(INCFLAG) -Wno-long-double
+  CFLAGS	= -W -Wall -ansi $(INCFLAG)
 else
   ifeq ($(findstring CYGWIN,$(ostype)), CYGWIN)
     BIN_SUFFIX	= .exe
