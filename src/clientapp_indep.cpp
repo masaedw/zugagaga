@@ -18,6 +18,8 @@ using namespace edw;
 using namespace edw::sdl;
 using namespace boost;
 
+#define function boost::function
+
 const int FPS = 30;
 
 class HogeTimer
@@ -248,7 +250,7 @@ namespace {
   private:
     sp_Graphic nomal_, pushed_;
     mutable Pos p_;
-    function<void()> cb_;//call back
+      function<void()> cb_;//call back
     int count_;
   };
   typedef boost::shared_ptr<Arrow> sp_Arrow;

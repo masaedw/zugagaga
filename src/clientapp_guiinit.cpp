@@ -17,7 +17,6 @@ using namespace zu3ga::network;
 using namespace zu3ga::graphic;
 using namespace zu3ga::graphic::Type;
 using namespace edw::sdl;
-using boost::function;
 using boost::bind;
 
 namespace {

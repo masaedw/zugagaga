@@ -132,7 +132,7 @@ INetworkData::operator >> ( unsigned char& arg )
 INetworkData&
 INetworkData::operator >> ( unsigned short& arg )
 {
-  arg = SDLNet_Read16(data_.data());
+  arg = SDLNet_Read16((void*)data_.data());
   data_.erase(0,2);
   return *this;
 }
@@ -140,7 +140,7 @@ INetworkData::operator >> ( unsigned short& arg )
 INetworkData&
 INetworkData::operator >> ( unsigned int& arg )
 {
-  arg = SDLNet_Read32(data_.data());
+  arg = SDLNet_Read32((void*)data_.data());
   data_.erase(0,4);
   return *this;
 }
@@ -148,7 +148,7 @@ INetworkData::operator >> ( unsigned int& arg )
 INetworkData&
 INetworkData::operator >> ( unsigned long& arg )
 {
-  arg = SDLNet_Read32(data_.data());
+  arg = SDLNet_Read32((void*)data_.data());
   data_.erase(0,4);
   return *this;
 }
@@ -156,7 +156,7 @@ INetworkData::operator >> ( unsigned long& arg )
 INetworkData&
 INetworkData::operator >> ( std::string& arg )
 {
-  unsigned long size = SDLNet_Read32(data_.data());
+  unsigned long size = SDLNet_Read32((void*)data_.data());
   arg = data_.substr(4,size);
   data_.erase(0,4+size);
   return *this;
